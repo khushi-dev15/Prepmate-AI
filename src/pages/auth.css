@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark gradient */
+    position: relative;
+}
+
+/* Subtle animated texture */
+.auth-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-radial-gradient(circle at center, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 20px, transparent 20px, transparent 40px);
+    animation: textureMove 25s linear infinite alternate;
+    z-index: 1;
+}
+
+@keyframes textureMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.auth-card {
+    position: relative;
+    z-index: 2; /* Ensure card is above background texture */
+    background: rgba(15, 32, 39, 0.95); /* Slightly transparent dark card */
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    text-align: center;
+}
+
+.auth-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #00f5d4; /* Neon teal title */
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-form input {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #06d6a0; /* Neon teal border */
+    background: #203a43; /* Dark input */
+    color: #e0f7fa;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.auth-form input:focus {
+    border-color: #00f5d4;
+    box-shadow: 0 0 8px #00f5d4;
+    outline: none;
+}
+
+.auth-form button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #00f5d4, #06d6a0); /* Neon gradient like main page button */
+    color: #0f2027;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.auth-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00f5d4;
+}
+
+.toggle-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #b2fef7;
+}
+
+.toggle-link {
+    color: #00f5d4;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.toggle-link:hover {
+    color: #06d6a0;
+}

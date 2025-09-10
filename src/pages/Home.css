@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark gradient */
+    color: #e0f7fa; /* Soft cyan text */
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 32, 39, 0.9); /* Transparent dark */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #00f5d4; /* Neon teal links */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #06d6a0; /* Lighter teal */
+}
+
+.hero-title {
+    font-size: 52px;
+    font-weight: 700;
+    animation: fadeInDown 1s ease-in-out;
+    color: #ffffff;
+}
+
+.hero-sub {
+    font-size: 20px;
+    margin: 15px 0;
+    animation: fadeInUp 1.5s ease-in-out;
+    color: #b2fef7;
+}
+
+.start-btn {
+    height: 50px;
+    width: 180px;
+    margin-top: 1%;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #00f5d4, #06d6a0); /* Neon gradient */
+    border: none;
+    color: #0f2027;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.start-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00f5d4;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
